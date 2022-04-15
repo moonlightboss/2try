@@ -36,6 +36,7 @@ export default {
     createUser() {
       this.user.id = Date.now();
       this.$emit("create", this.user);
+      console.log(this.user);
       this.user = {
         name: "",
         email: "",
@@ -49,8 +50,9 @@ export default {
 
 <style>
 .input {
-  width: 100%;
-  border: 2px solid green;
-  margin-top: 15px;
+  width: 50%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
 }
 </style>

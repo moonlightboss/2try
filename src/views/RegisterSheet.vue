@@ -9,7 +9,8 @@ import RegisterForm from "@/components/RegisterForm.vue";
 export default {
   methods: {
     createUser(user) {
-      this.users.push(user);
+      this.$emit("adduser", this.user);
+      console.log(user);
     },
   },
   components: {

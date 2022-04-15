@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from "vue-router";
 import HomeView from "../views/HomeView.vue";
-import UserSheets from "../views/UserSheets.vue";
+import RegisterSheet from "../views/RegisterSheet.vue";
 import FirstPage from "../views/FirstPage.vue";
 
 const routes = [
@@ -10,9 +10,9 @@ const routes = [
     component: HomeView,
   },
   {
-    path: "/UserSheets",
-    name: "UserSheets",
-    component: UserSheets,
+    path: "/RegisterSheet",
+    name: "RegisterSheet",
+    component: RegisterSheet,
   },
   {
     path: "/FirstPage",

@@ -2,12 +2,12 @@
   <nav>
     <router-link to="/">Home</router-link> |
     <router-link to="/about">About</router-link> |
-    <router-link to="/UserSheets">User List </router-link> |
+    <router-link to="/RegisterSheet">Register </router-link> |
     <router-link to="/FirstPage"> Table List </router-link>
   </nav>
-  <user-list :users="users" />
-  <register-form @create="createUser" />
   <router-view />
+  <register-form @create="createUser" />
+  <user-list :users="users" />
 </template>
 <script>
 import UserList from "@/components/UserList.vue";
@@ -17,9 +17,20 @@ export default {
   data() {
     return {
       users: [
-        { id: 1, name: "Vladislav", email: "check@check" },
-        { id: 2, name: "Vladislav1", email: "check@check1" },
-        { id: 3, name: "Vladislav2", email: "check@check2" },
+        {
+          id: 1,
+          name: "Test1",
+          email: "check@check",
+          pass: "22222",
+          phonenumber: "33333",
+        },
+        {
+          id: 2,
+          name: "Vladislav1",
+          email: "check@check1",
+          pass: "newPass333",
+          phonenumber: "33333-8888-99999",
+        },
       ],
     };
   },
